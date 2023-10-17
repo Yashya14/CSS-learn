@@ -1,0 +1,22 @@
+/*  #ff3368; #ecfdff; */
+.para{
+    color: #e83565;
+}
+
+h1{
+    color: rgb(0, 66, 221);
+}
+
+/* tag selctor */   
+#btn{
+    color: white;
+    background-color: rgb(220, 16, 220);
+}
+
+#btn:hover{
+    color: red;
+    background-color: white;
+}
+
+/*  css Specificity  - high order will win*/
+/* declarations = property and value */
