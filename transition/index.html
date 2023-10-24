@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transition in csss</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        } */
+
+      body {
+        background-color: #2b3033;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        /* align-items: start;  */
+        /* new property */
+        gap: 40px;
+      }
+
+      .box {
+        width: 100px;
+        aspect-ratio: 1;
+        background-color: rgb(3, 230, 255);
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px rgba(108, 244, 223, 0.4);
+        transition: all 5s;
+      }
+      /* first box */
+      .box:nth-child(1):hover {
+        transition-timing-function: ease;
+        /* new css feature */
+        translate: 90vw 0;
+      }
+
+       /* second box */
+      .box:nth-child(2):hover {
+        transform: translateX(90vw);
+        translate: 5s ease-in;
+      }
+
+       /* third  box */
+      .box:nth-child(3):hover {
+        transform: translateX(90vw);
+        translate: 5s ease-in-out;
+      }
+
+      .box:nth-child(4):hover {
+        transform: translateX(90vw);
+        translate: 5s linear ;
+      }
+
+
+    </style>
+  </head>
+  <body>
     <div class="btn">
-        <input type="button" value="Submit">
+      <input type="button" value="Submit" />
     </div>
-</body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
 </html>
