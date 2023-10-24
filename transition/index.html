@@ -14,6 +14,7 @@
 
       body {
         background-color: #2b3033;
+        color: #fff;
       }
 
       .container {
@@ -25,6 +26,7 @@
         /* align-items: start;  */
         /* new property */
         gap: 40px;
+        
       }
 
       .box {
@@ -59,6 +61,29 @@
         translate: 5s linear ;
       }
 
+      /* transform in css*/
+
+      .container img{
+        width: 100%;
+        height: auto;
+        transition: all 1s linear;
+        height: 500px;
+        width: 500px;
+      }
+
+      .container img:hover{
+        /* transform: translateX(200px); */
+        /* translate:0 200px; */
+
+        /* for zooming */
+        /* transform: scale3d(1); */
+        /* transform: scaleX(1); */
+        /* transform: rotate(360deg); */
+        scale: -2;
+        /* transform: skewY(10deg); */
+
+        
+      }
 
     </style>
   </head>
@@ -71,7 +96,12 @@
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
-      <div class="box"></div>
+      <!-- <div class="box"></div> -->
+    </div>
+
+    <h1>Transform in css</h1>
+    <div class="container">
+        <img src="../images/code.png" alt="img">
     </div>
   </body>
 </html>
